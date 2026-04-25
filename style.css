@@ -1,0 +1,140 @@
+.custom-button {
+  /* Dimensions */
+  width: 84px;
+  height: 84px;
+
+  /* Shaping */
+  border-radius: 15px;
+  border: none;
+
+  /* Color: #AEC49E with 152/255 opacity (Hex 98) */
+  /*background-color: #AEC49E98;*/
+  background: linear-gradient(135deg, #c5d6b898 0%, #aec49e98 100%);
+
+  /* Presentation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  /* Typography */
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #49534b;
+  text-transform: uppercase; /* Optional */
+  letter-spacing: 0.5px;
+
+  /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* THE "BRIGHT LIGHT" INNER SHADOW EFFECT */
+  /* 1. Subtle soft shadow outside (for lift) */
+  /* 2. Soft white shine *inset* at the top-left */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.4);
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+/* Subtle hover effect for better UX */
+.custom-button:hover {
+  background: linear-gradient(135deg, #c5d6b898 0%, #aec49ebf 100%);
+}
+
+.custom-button span {
+  position: absolute;
+  background: #fff;
+  transform: translte(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+/* ICON */
+#btn-one {
+  position: relative;
+  left: 100px;  /* X coordinate */
+  top: 0px;  /* Y coordinate */
+}
+
+/* TITLE */
+#btn-two {
+  position: relative;
+  left: 271px; /* X coordinate */
+  top: 91px;  /* Y coordinate */
+}
+
+/* TAGLINE */
+#btn-three {
+  position: relative;
+  left: 262px; /* X coordinate */
+  top: 2px;  /* Y coordinate */
+}
+
+/* SMS */
+#btn-four {
+  position: relative;
+  left: 163px; /* X coordinate */
+  top: 180px;  /* Y coordinate */
+}
+
+/* TERMS */
+#btn-five {
+  position: relative;
+  left: -205px; /* X coordinate */
+  top: 270px;  /* Y coordinate */
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+/* Canvas */
+
+/* Main Div */
+
+.main {
+  max-width: 800px;
+}
+
+/* Main Image */
+.center-image {
+  position: absolute;   /* Sticks it to the screen */
+  top: 50%;          /* Moves top edge to the middle */
+  left: 50%;         /* Moves left edge to the middle */
+  
+  /* This part is the "secret sauce" that centers the image itself */
+  transform: translate(-50%, -50%); 
+  
+  /* Optional: set a width so it doesn't take up the whole screen */
+  width: 860px;
+  height: auto;
+}
+
+/* Buttons */
+.main_buttons {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+
+  left:443px;
+  top: 331px;
+  z-index: 999;
+}
