@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Twinkle+Star&display=swap');
 
 .custom-button {
   /* Dimensions */
@@ -110,24 +111,48 @@
 
 /* Canvas */
 
+/* * {
+  outline: 1px solid red !important;
+} */
+
+h1 {
+  margin: 0;      /* Kill all default spacing */
+  padding: 10px;  /* Use padding for the gap instead of margin */
+  text-align: center;
+
+  /* Typography */
+  font-family: "Twinkle Star", cursive;
+  font-weight: 400;
+  font-size: 150px;
+  font-style: normal;
+  color: #f9fdfa;
+  letter-spacing: 25px;
+}
+
 /* Main Div */
 
 .main {
-  max-width: 800px;
+  position: relative;   /* This is the "anchor" for the buttons */
+  width: 100%;
+  max-width: 860px;     /* Match your image width */
+  margin: 0 auto;       /* This keeps the whole group centered */
+  margin-top: 10px;
+  display: block;
 }
 
 /* Main Image */
 .center-image {
-  position: absolute;   /* Sticks it to the screen */
-  top: 50%;          /* Moves top edge to the middle */
-  left: 50%;         /* Moves left edge to the middle */
+  /* position: absolute;   /* Sticks it to the screen */
+  /* top: 50%;          /* Moves top edge to the middle */
+  /* left: 50%;         /* Moves left edge to the middle */
   
   /* This part is the "secret sauce" that centers the image itself */
-  transform: translate(-50%, -50%); 
+  /* transform: translate(-50%, -50%);  */
   
   /* Optional: set a width so it doesn't take up the whole screen */
-  width: 860px;
+  width: 100%;
   height: auto;
+  display:block; /* Fills up container */
 }
 
 /* Buttons */
@@ -136,7 +161,10 @@
   display: flex;
   gap: 15px;
 
-  left:443px;
-  top: 331px;
+  /* This part is the "secret sauce" that centers the image itself */
+  transform: translate(-50%, -50%); 
+
+  left: calc(41%);
+  top: calc(35% - 6px);
   z-index: 999;
 }
