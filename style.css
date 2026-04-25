@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .custom-button {
   /* Dimensions */
   width: 84px;
@@ -19,7 +21,7 @@
   transition: background-color 0.2s ease;
 
   /* Typography */
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #49534b;
