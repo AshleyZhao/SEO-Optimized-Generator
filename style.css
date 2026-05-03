@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Twinkle+Star&display=swap');
+ */
 
 .custom-button {
   /* Dimensions */
@@ -22,8 +23,8 @@
   transition: background-color 0.2s ease;
 
   /* Typography */
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: "Syne", sans-serif;
+  font-size: 12px;
   font-weight: 600;
   color: #49534b;
   text-transform: uppercase; /* Optional */
@@ -121,7 +122,7 @@ h1 {
   text-align: center;
 
   /* Typography */
-  font-family: "Twinkle Star", cursive;
+  font-family: "Syne", sans-serif;
   font-weight: 400;
   font-size: 150px;
   font-style: normal;
