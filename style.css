@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Twinkle+Star&display=swap');
  */
 
+ :root {
+  --primary: 100 66% 61%;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .custom-button {
   /* Dimensions */
   width: 84px;
@@ -62,6 +72,74 @@
   transform: translate(-50%, -50%);
 }
 
+/* BUY ALL */
+
+.btn {
+  all: unset;
+  
+  width: 258px;
+  height: 84px;
+  
+  /* Shaping */
+  border-radius: 15px;
+  border: none;
+
+  /* Typography */
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  color: #f5f5f3;
+  text-transform: uppercase; /* Optional */
+  letter-spacing: 0.5px;
+  font-size: 24px;
+  margin-top: 100px;
+
+  background: linear-gradient(135deg, rgba(190, 225, 170) 0%, rgba(162, 205, 138) 100%);
+
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  /* Ensure the text stays on top */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: visible;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, rgba(190, 225, 170) 0%, rgba(144, 195, 116) 100%);
+}
+
+
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: -3px; /* Slightly larger for a thicker border */
+  z-index: -1;  /* This moves the glow BEHIND the black button */
+  border-radius: inherit; /* Matches the 100px radius */
+  background-image: conic-gradient(
+    from var(--angle) at 50% 50%, /* Fixed the % here */
+    transparent 0%,
+    transparent 30%,
+    hsl(var(--primary)) 50%,
+    transparent 70%
+  );
+  animation: rotate 3s linear infinite;
+}
+
+/* This creates the actual "Glow" effect */
+.btn::after {
+  filter: blur(30px);
+  opacity: 0.7;
+}
+
+@keyframes rotate {
+  from { --angle: 0deg; }
+  to { --angle: 360deg; }
+}
+
 /* ICON */
 #btn-one {
   position: relative;
@@ -95,6 +173,12 @@
   position: relative;
   left: -205px; /* X coordinate */
   top: 270px;  /* Y coordinate */
+}
+
+#buy-all {
+  position: relative;
+  left: -120px;
+  top: 171px;
 }
 
 @keyframes animate {
@@ -160,12 +244,13 @@ h1 {
 .main_buttons {
   position: absolute;
   display: flex;
+  
   gap: 15px;
 
   /* This part is the "secret sauce" that centers the image itself */
   transform: translate(-50%, -50%); 
 
-  left: calc(41%);
-  top: calc(35% - 6px);
+  left: calc(57% - 2px);
+  top: calc(41% - 6px);
   z-index: 999;
 }
