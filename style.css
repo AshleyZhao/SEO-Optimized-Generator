@@ -140,6 +140,96 @@
   to { --angle: 360deg; }
 }
 
+
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+/* Canvas */
+
+/* * {
+  outline: 1px solid red !important;
+} */
+
+h1 {
+  margin: 0;      /* Kill all default spacing */
+  
+  /* padding: 10px;  Use padding for the gap instead of margin */
+  text-align: center;
+
+  /* Typography */
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  font-size: 130px;
+  font-style: normal;
+  color: #f9fdfa;
+  letter-spacing: 10px;
+}
+
+.banner {
+  /* Banner background */
+  background-image: url("./images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 200px;   /* or whatever you want */
+  display: flex;
+  align-items: flex-start;
+
+  transform: translateY(-20px);
+  
+  justify-content: center;
+}
+
+/* Main Div */
+
+.main {
+  position: relative;   
+  width: 100%;
+  max-width: 860px;     
+  margin: 0 auto;       
+  
+  /* Adjust this pixel value to exactly control your gap size */
+  margin-top: 0px; 
+  display: block;
+}
+
+.center-image {
+  width: 100%;
+  height: auto;
+  display: block; 
+  
+  /* Guarantees no phantom margins under or above image */
+  margin: 0; 
+}
+
+/* Buttons */
+.main_buttons {
+  position: absolute;
+  display: flex;
+  
+  gap: 15px;
+
+  /* This part is the "secret sauce" that centers the image itself */
+  transform: translate(-50%, -50%); 
+
+  left: calc(57% - 2px);
+  top: calc(36% - 4px);
+  z-index: 999;
+  
+}
+
 /* ICON */
 #btn-one {
   position: relative;
@@ -181,89 +271,6 @@
   top: 171px;
 }
 
-@keyframes animate {
-  0% {
-    width: 0px;
-    height: 0px;
-    opacity: 0.5;
-  }
-  100% {
-    width: 500px;
-    height: 500px;
-    opacity: 0;
-  }
-}
-
-/* Canvas */
-
-/* * {
-  outline: 1px solid red !important;
-} */
-
-h1 {
-  margin: 0;      /* Kill all default spacing */
-  padding: 10px;  /* Use padding for the gap instead of margin */
-  text-align: center;
-
-  /* Typography */
-  font-family: "Syne", sans-serif;
-  font-weight: 400;
-  font-size: 130px;
-  font-style: normal;
-  color: #f9fdfa;
-  letter-spacing: 10px;
-}
-
-.banner {
-  /* Banner background */
-  background-image: url("./images/banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  height: 200px;   /* or whatever you want */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Main Div */
-
-.main {
-  position: relative;   /* This is the "anchor" for the buttons */
-  width: 100%;
-  max-width: 860px;     /* Match your image width */
-  margin: 0 auto;       /* This keeps the whole group centered */
-  margin-top: 10px;
-  display: block;
-}
-
-/* Main Image */
-.center-image {
-  /* position: absolute;   /* Sticks it to the screen */
-  /* top: 50%;          /* Moves top edge to the middle */
-  /* left: 50%;         /* Moves left edge to the middle */
-  
-  /* This part is the "secret sauce" that centers the image itself */
-  /* transform: translate(-50%, -50%);  */
-  
-  /* Optional: set a width so it doesn't take up the whole screen */
-  width: 100%;
-  height: auto;
-  display:block; /* Fills up container */
-}
-
-/* Buttons */
-.main_buttons {
-  position: absolute;
-  display: flex;
-  
-  gap: 15px;
-
-  /* This part is the "secret sauce" that centers the image itself */
-  transform: translate(-50%, -50%); 
-
-  left: calc(57% - 2px);
-  top: calc(41% - 6px);
-  z-index: 999;
+body {
+  margin: 0;
 }
