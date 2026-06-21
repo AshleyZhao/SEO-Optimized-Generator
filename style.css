@@ -208,10 +208,23 @@ h1 {
   /* Typography */
   font-family: "Syne", sans-serif;
   font-weight: 400;
-  font-size: 150px;
+  font-size: 130px;
   font-style: normal;
   color: #f9fdfa;
-  letter-spacing: 25px;
+  letter-spacing: 10px;
+}
+
+.banner {
+  /* Banner background */
+  background-image: url("./images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 200px;   /* or whatever you want */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Main Div */
